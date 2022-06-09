@@ -35,10 +35,18 @@ body {
   position: relative;
 }
 
+img {
+  max-width: 100%;
+}
+
+span {
+  display: block;
+}
+
 .bg--pattern::before {
   content: "";
-  width: 100%;
-  height: 60vh;
+  height: 500px;
+  width: 500px;
   background-image: linear-gradient(190deg, rgba(233, 66, 255, 0.8999) 0%, rgb(136, 56, 255) 83%);
   position: absolute;
   z-index: -1;
@@ -52,4 +60,46 @@ body {
   -moz-transform: translateX(-50%) translateY(-10%);
   -ms-transform: translateX(-50%) translateY(-10%);
   -o-transform: translateX(-50%) translateY(-10%);
+}
+@media only screen and (min-width: 35.625em) {
+  .bg--pattern::before {
+    height: 80vh;
+    transform: translateX(-20%);
+    -webkit-transform: translateX(-20%);
+    -moz-transform: translateX(-20%);
+    -ms-transform: translateX(-20%);
+    -o-transform: translateX(-20%);
+  }
+}
+
+.main--container {
+  height: 100%;
+  display: grid;
+  margin: 0 auto;
+}
+
+.mobile {
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  background-color: var(--White);
+}
+.mobile--header {
+  display: flex;
+  justify-content: space-between;
+}
+.mobile .img-avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  border: 1px solid var(--White);
+}
+.mobile--owner {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */
