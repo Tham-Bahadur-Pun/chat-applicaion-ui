@@ -30,8 +30,8 @@ html {
 
   // ====GRADIENT===
 
-  --Light-Magenta: hsl(293, 100%, 63%);
-  --Light-Violet: hsl(264, 100%, 61%);
+  --Light-Magenta: #e942ff;
+  --Light-Violet: #8838ff;
 
   //  =======SECONDARY====
   --White: hsl(0, 0%, 100%);
@@ -42,3 +42,40 @@ html {
   //   (radio button outline)
   --Very-Light-Magenta: hsl(289, 100%, 72%);
 }
+
+body {
+  background-color: var(--Light-Grayish-Violet);
+  font-size: 1.6rem;
+  min-height: 100vh;
+  position: relative;
+}
+
+.bg--pattern {
+  &::before {
+    content: "";
+    width: 100%;
+    height: 60vh;
+    // max-height: 80vh;
+    background-image: linear-gradient(
+      190deg,
+      rgba(233, 66, 255, 0.8999) 0%,
+      rgba(136, 56, 255, 1) 83%
+    );
+    position: absolute;
+    z-index: -1;
+    border-radius: 0 0 100% 100%;
+    -webkit-border-radius: 0 0 100% 100%;
+    -moz-border-radius: 0 0 100% 100%;
+    -ms-border-radius: 0 0 100% 100%;
+    -o-border-radius: 0 0 100% 100%;
+    transform: translateX(-50%) translateY(-10%);
+    -webkit-transform: translateX(-50%) translateY(-10%);
+    -moz-transform: translateX(-50%) translateY(-10%);
+    -ms-transform: translateX(-50%) translateY(-10%);
+    -o-transform: translateX(-50%) translateY(-10%);
+  }
+}
+
+// .main--container {
+//   position: absolute;
+// }
